@@ -1,0 +1,18 @@
+﻿@section Scripts {
+    <script src="~/Content/js/app-category.js"></script>
+    <script src="~/Content/js/app/historyController.js"></script>
+}
+<div ng-app="app-category">
+    <div ng-controller="historyController">
+        <div class="historyList">
+            <h3>Search History</h3>
+            <hr />
+            <ul ng-repeat="history in historyList"> 
+                <li class="historyItem">
+                    <h4 ng-click="search(history)" >{{history.SearchLabel}}</h4>
+                    <span>saved on {{history.SubmitDate}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
